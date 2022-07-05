@@ -5,17 +5,11 @@ GIT CODE
 "git init"
     this command turns a diirectory into an empty
     repository
-        mkdir -directory name-
-        cd -directory name-/(go into directory)
-        cd .. (goes to previous directory)
         git init
 
 "git add"
     adds file to the staging area of git. before a
     file is availible to commit to a repository, the file needs to be added to the git index (staging area)
-        touch -file name-
-        gedit -file name-
-        cat "prints file"
         git add -file name- (adds changed file to the staving stage)
         git add . (add all changed files)
 
@@ -91,4 +85,5 @@ ADVANCED CODE
 reference: 
 
     https://www.youtube.com/watch?v=8hl-eDyhmJs
-    
+
+    https://education.github.com/git-cheat-sheet-education.pdf
