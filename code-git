@@ -84,4 +84,4 @@ ADVANCED CODE
         git rebase master (moves all work from current branch to master branch)
         
 "git revert"
-    it helps you to roll back to the previous version of the file
+    helps you to roll back to the previous version of the file
