@@ -5,7 +5,7 @@ GIT CODE
 "git init"
     this command turns a diirectory into an empty
     repository
-        mkdir -directory name-
+        mkdir -directory name- (cannot have spaces in name so use -/_)
         cd -directory name-/(go into directory)
         cd .. (goes to previous directory)
         git init
@@ -91,4 +91,5 @@ ADVANCED CODE
 reference: 
 
     https://www.youtube.com/watch?v=8hl-eDyhmJs
-    
+
+    https://education.github.com/git-cheat-sheet-education.pdf
