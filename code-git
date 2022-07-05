@@ -1,0 +1,87 @@
+GIT CODE 
+
+
+
+"git init"
+    this command turns a diirectory into an empty
+    repository
+        mkdir -directory name-
+        cd -directory name-/(go into directory)
+        cd .. (goes to previous directory)
+        git init
+
+"git add"
+    adds file to the staging area of git. before a
+    file is availible to commit to a repository, the file needs to be added to the git index (staging area)
+        touch -file name-
+        gedit -file name-
+        cat "prints file"
+        git add -file name- (adds changed file to the staving stage)
+        git add . (add all changed files)
+
+"got commit"
+    records the changes made to the file in a local repository. for easy reference each commit has a unique id (good practice to add a commit message to know what change was made)
+        git commit -m "-commit message-"    
+  
+"git status"
+    returns the current state of the repository. git status will returns the current walking branch. if a file is in the staging area but not commited it will show with git status. if there are no changes it'll return "nothing to commit, working directories clean."
+        git status
+
+"git config"
+    with git, there are many configuratioms and  settings possible. "git config" iis how to assign these settings. two important settings are user user.name and user.email. name and e-mail adress asigned of commit-s from a loval computer.
+        git config -global user.name "eaboagye"
+        git config -global user.email "eaboagye@gmail.com"
+        git config user.name "eaboagye" 
+        git config user email "eaboagye@gmail.com"
+
+
+BRANCHING 
+
+"git branch"
+    branches are used to create another line of development. by default git has a master branch. usually a branch is made to create a new feature. if your working on web application you might want to work on the card service, for that youll create a new feature branch or any that you want to give to your branch and once the feature is completed it is merged back with the master branch and we delete the feature branch. every branch is referenced by head which points to the latest commit of the branch whenever you make a commit head is updated with the latest commit
+        git branch (checkout current branches)
+        git merge (integrate branches together)
+        git checkout (useed for switching branches)
+        git checkout -d -branch name- (will create and check into branch)
+         git branch  -branch name- (make/open)
+         git merge -branch name- (must be in master branch to merge (use git checkout to get to master branch)(can now delete the seprate branch after merging))
+         (perferred) git branch -d -branch name- (will show error telling you if there are unmerged changes)
+         git branch -D -branch name- (will delete branch WITH unsaved changes)
+
+
+
+WORKING WITH REMOTE REPOSITORIES
+
+"git remote"
+    connects a local repository with a remote repository
+        git remote add origin -ssh link-
+"git clone"
+    creats a local copy of an existing remote repository
+        git clone -ssh link-
+        git pull origin mmaster (pull file changes from remote repository to local repository)
+        git push origin master (push file changes from local repository to remote repository(must add and commit file changes))
+
+
+
+ADVANCED CODE
+
+"git stash"
+    to save changes made when they are not in a state to commit them to a repository
+        git stash -u (stash all not commited)
+        git stash list
+        git stash show
+        git stash apply (takes directory from stash)
+"git log"
+    this helps give context and history for a repository
+        git log (shows chronological commit history for a repository)
+        git log --before="mm/dd/yy"
+        git log --author="name author"
+        git log --oneline
+        git reveret -commit id- (revert operation and what ever file changes that happen been done after will be reflects as a commit itself)
+        git revert head (reverts last commit)
+"git rebase" 
+    takes a set of commits, copies them and stores them outside you repository
+        git rebase master (moves all work from current branch to master branch)
+        
+"git revert"
+    it helps you to roll back to the previous version of the file
